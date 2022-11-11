@@ -1,4 +1,3 @@
-# golang-simpleapp
-CRUD application on golang
-Database: PostgreSQL in Docker enironment
-Used Repostory-Service pattern
+# CRUD application on Golang
+- Database: PostgreSQL in Docker environment
+- Repostory-Service pattern
