@@ -1,0 +1,22 @@
+{{ define "Edit" }}
+    {{ template "Header" }}
+{{/*    {{ template "Menu" }}*/}}
+    <main class="flex-shrink-0">
+        <div class="container">
+    <h2>Edit product</h2>
+    <form method="POST" action="update">
+        <input type="hidden" name="id" value="{{ .Id }}" />
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" name="title" value="{{ .Title }}" class="form-control" id="Title">
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <input type="text" name="description" value="{{ .Description }}" class="form-control" id="Description">
+        </div>
+        <input type="submit" class="btn btn-success" value="Update product" />
+    </form>
+        </div>
+    </main>
+    {{ template "Footer" }}
+{{ end }}

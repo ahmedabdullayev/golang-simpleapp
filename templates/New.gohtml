@@ -1,0 +1,26 @@
+{{ define "New" }}
+    {{ template "Header" }}
+{{/*    {{ template "Menu" }}*/}}
+    <main class="flex-shrink-0">
+        <div class="container">
+    <h2>Add product</h2>
+    <form method="POST" action="post">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" id="Title">
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <input type="text" name="description" class="form-control" id="Description">
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary" value="Save" />
+        </div>
+    </form>
+        {{ range . }}
+            <p style="color: red"> Please fix  <b> {{ . }} </b> field </p>
+        {{ end }}
+        </div>
+    </main>
+    {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "Show" }}
+    {{ template "Header" }}
+{{/*    {{ template "Menu"  }}*/}}
+    <main class="flex-shrink-0">
+        <div class="container">
+    <h5> Product id: {{ .Id }} </h5>
+    <p><b>Title:</b> {{ .Title }}</p>
+    <p><b>Description:</b>  {{ .Description }}</p><br /> <a href="/edit?id={{ .Id }}">Edit</a></p>
+        </div>
+    </main>
+    {{ template "Footer" }}
+{{ end }}
